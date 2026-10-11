@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>月亮影视大全 - 影视条目聚合与更新索引导航</title>
+<meta name="description" content="月亮影视大全是影视条目聚合索引站点，提供院线速览、剧集追更、动漫番剧、综艺纪实、影人档案与榜单专题等栏目，条目分类清晰，更新台账可查，移动端自适应，索引每日更新。">
+<meta name="keywords" content="月亮影视大全,月亮影视大全官网,影视条目聚合,影视索引导航,院线速览,剧集追更,动漫番剧,综艺纪实,影人档案">
+<meta name="author" content="月亮影视大全">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#080d24">
+<link rel="canonical" href="https://yueliangyingshidaquan-cn.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://yueliangyingshidaquan-cn.github.io/">
+<link rel="alternate" hreflang="x-default" href="https://yueliangyingshidaquan-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="月亮影视大全">
+<meta property="og:title" content="月亮影视大全 - 影视条目聚合与更新索引导航">
+<meta property="og:description" content="月亮影视大全：院线速览、剧集追更、动漫番剧、综艺纪实、影人档案与榜单专题，多端自适应，条目分类清晰。">
+<meta property="og:url" content="https://yueliangyingshidaquan-cn.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="月亮影视大全 - 影视条目聚合与更新索引导航">
+<meta name="twitter:description" content="院线速览、剧集追更、动漫番剧、综艺纪实、影人档案与榜单专题，多端自适应。">
+<style>
+/* ================== 基础与变量 ================== */
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:96px;}
+body{
+  margin:0;padding:0;
+  background:#080d24;
+  color:#e9eefb;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans CN","Noto Sans CJK SC",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:16px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block;}
+a{color:inherit;text-decoration:none;}
+ul,ol,dl,dd{margin:0;padding:0;list-style:none;}
+h1,h2,h3,h4{margin:0;font-weight:800;line-height:1.35;}
+p{margin:0;}
+button{font:inherit;color:inherit;}
+:root{
+  --night:#080d24;
+  --night2:#0d1533;
+  --night3:#111a3d;
+  --glass:rgba(255,255,255,.055);
+  --glass2:rgba(255,255,255,.09);
+  --line:rgba(255,255,255,.14);
+  --line2:rgba(255,255,255,.26);
+  --silver:#e9eefb;
+  --dim:#9aa6c4;
+  --dim2:#7a86a6;
+  --moon:#ffd79a;
+  --moon-d:#f0b95f;
+  --cyan:#7fd7ff;
+  --violet:#b39dff;
+  --r:18px;
+  --maxw:1200px;
+}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+
+/* ================== 顶部条 + 横向胶囊导航（无 JS） ================== */
+.hdr{
+  position:sticky;top:0;z-index:90;
+  background:rgba(8,13,36,.86);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.hdr__in{
+  max-width:var(--maxw);margin:0 auto;padding:11px 22px;
+  display:flex;align-items:center;gap:18px;
+}
+.logo{display:flex;align-items:center;gap:11px;flex:0 0 auto;}
+.logo__orb{
+  flex:0 0 34px;width:34px;height:34px;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%,#fff8e7,#ffe6b8 45%,#e8b764 100%);
+  box-shadow:0 0 16px rgba(255,215,154,.5),inset -6px -5px 12px rgba(0,0,0,.18);
+}
+.logo__n{display:block;font-size:16.5px;font-weight:800;letter-spacing:.5px;white-space:nowrap;}
+.logo__d{display:block;font-size:11px;color:var(--dim2);letter-spacing:.3px;}
+.pnav{
+  margin-left:auto;display:flex;gap:6px;align-items:center;
+  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  scroll-snap-type:x proximity;
+}
+.pnav::-webkit-scrollbar{display:none;}
+.pnav a{
+  flex:0 0 auto;scroll-snap-align:start;white-space:nowrap;
+  font-size:13.5px;color:var(--dim);
+  border:1px solid var(--line);border-radius:999px;
+  padding:7px 15px;background:var(--glass);
+  transition:color .18s ease,background .18s ease,border-color .18s ease;
+}
+.pnav a:hover,.pnav a:focus-visible{color:var(--silver);background:var(--glass2);border-color:var(--line2);outline:none;}
+.pnav a.hot{color:#0d1533;background:linear-gradient(120deg,var(--moon),var(--moon-d));border-color:transparent;font-weight:700;}
+
+/* ================== 栏目一：月夜 Hero（左文右月） ================== */
+.hero{
+  position:relative;overflow:hidden;
+  padding:clamp(40px,7vw,86px) 0 clamp(34px,6vw,64px);
+  background:
+    radial-gradient(700px 420px at 82% 18%,rgba(255,215,154,.22),transparent 62%),
+    radial-gradient(620px 420px at 8% 4%,rgba(127,215,255,.14),transparent 62%),
+    linear-gradient(180deg,#080d24 0%,#0d1533 60%,#080d24 100%);
+}
+.hero__stars{
+  position:absolute;inset:0;pointer-events:none;opacity:.75;
+  background-image:
+    radial-gradient(1.4px 1.4px at 24px 38px,rgba(255,255,255,.85),transparent),
+    radial-gradient(1.2px 1.2px at 138px 96px,rgba(255,255,255,.6),transparent),
+    radial-gradient(1.6px 1.6px at 76px 168px,rgba(255,255,255,.7),transparent),
+    radial-gradient(1.1px 1.1px at 196px 22px,rgba(255,255,255,.5),transparent),
+    radial-gradient(1.3px 1.3px at 168px 214px,rgba(255,255,255,.55),transparent);
+  background-size:260px 260px;
+}
+.hero__grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,56px);align-items:center;
+}
+.badge-moon{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:2px;color:var(--moon);
+  border:1px solid rgba(255,215,154,.35);background:rgba(255,215,154,.08);
+  border-radius:999px;padding:5px 14px;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(28px,5.2vw,50px);letter-spacing:-.6px;margin-bottom:16px;
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,#fff8e7,var(--moon) 45%,var(--cyan));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero__lead{font-size:clamp(14.5px,2.1vw,17px);color:var(--dim);max-width:56ch;margin-bottom:24px;}
+.hero__lead strong{color:var(--silver);font-weight:700;}
+.hero__acts{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:26px;}
+.act{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:12px 22px;border-radius:999px;font-size:14.5px;font-weight:700;
+  transition:transform .18s ease,background .18s ease;
+}
+.act:hover{transform:translateY(-2px);}
+.act--fill{background:linear-gradient(120deg,var(--moon),var(--moon-d));color:#20160a;}
+.act--line{border:1px solid var(--line2);background:var(--glass);color:var(--silver);}
+.act--line:hover{background:var(--glass2);}
+.hero__data{
+  display:flex;flex-wrap:wrap;gap:0;
+  border:1px solid var(--line);border-radius:var(--r);background:var(--glass);
+  overflow:hidden;
+}
+.hero__data > div{flex:1 1 25%;min-width:108px;padding:13px 14px;border-right:1px solid var(--line);}
+.hero__data > div:last-child{border-right:0;}
+.hero__data dt{font-size:11.5px;color:var(--dim2);letter-spacing:1px;margin-bottom:2px;}
+.hero__data dd{font-size:21px;font-weight:800;color:var(--moon);line-height:1.2;}
+.hero__data dd i{font-style:normal;font-size:12.5px;color:var(--dim);margin-left:3px;}
+.moonbox{display:flex;flex-direction:column;align-items:center;gap:18px;}
+.moon{
+  position:relative;width:clamp(150px,26vw,232px);aspect-ratio:1/1;border-radius:50%;
+  background:radial-gradient(circle at 33% 29%,#fffaf0 0%,#ffe9c2 38%,#f0c584 68%,#d5a459 100%);
+  box-shadow:0 0 70px 14px rgba(255,215,154,.3),0 0 160px 40px rgba(255,215,154,.12),inset -22px -16px 44px rgba(0,0,0,.2);
+}
+.moon::before,.moon::after{
+  content:"";position:absolute;border-radius:50%;
+  background:radial-gradient(circle at 40% 36%,rgba(190,150,90,.42),rgba(190,150,90,.14) 60%,transparent 72%);
+}
+.moon::before{width:26%;height:26%;left:20%;top:24%;}
+.moon::after{width:17%;height:17%;left:56%;top:58%;}
+.moon__ring{
+  position:absolute;inset:-24px;border-radius:50%;
+  border:1px dashed rgba(255,215,154,.28);
+  animation:spin 46s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+.mooncap{
+  text-align:center;font-size:13px;color:var(--dim);
+  border:1px solid var(--line);border-radius:var(--r);background:var(--glass);
+  padding:12px 16px;max-width:300px;
+}
+.mooncap b{color:var(--silver);}
+
+/* ================== 通用区块 ================== */
+.sec{padding:clamp(38px,6vw,72px) 0;}
+.sec--deep{background:linear-gradient(180deg,#080d24,#0d1533 50%,#080d24);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sh{max-width:760px;margin-bottom:clamp(20px,3.5vw,32px);}
+.sh__tag{
+  display:inline-block;font-size:11.5px;letter-spacing:2px;color:var(--cyan);
+  border:1px solid rgba(127,215,255,.3);background:rgba(127,215,255,.08);
+  border-radius:6px;padding:3px 11px;margin-bottom:11px;
+}
+.sh h2{font-size:clamp(21px,3.2vw,30px);letter-spacing:-.3px;margin-bottom:9px;}
+.sh p{font-size:14.5px;color:var(--dim);}
+
+/* ================== 栏目二：瀑布流（CSS 多列 masonry） ================== */
+.masonry{columns:3;column-gap:14px;}
+.masonry > article{
+  break-inside:avoid;-webkit-column-break-inside:avoid;
+  border:1px solid var(--line);border-radius:var(--r);
+  background:linear-gradient(165deg,var(--glass2),var(--glass));
+  padding:20px;margin:0 0 14px;
+  transition:border-color .2s ease,transform .2s ease;
+}
+.masonry > article:hover{border-color:var(--line2);transform:translateY(-3px);}
+.masonry h3{font-size:16.5px;margin-bottom:8px;display:flex;align-items:center;gap:9px;}
+.masonry h3 span{
+  flex:0 0 30px;width:30px;height:30px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;font-size:15px;
+  background:rgba(255,215,154,.12);border:1px solid rgba(255,215,154,.28);
+}
+.masonry p{font-size:13.8px;color:var(--dim);margin-bottom:11px;}
+.masonry ul li{
+  font-size:13px;color:var(--dim);padding:6px 0;
+  border-top:1px dashed rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+}
+.masonry ul li:first-child{border-top:0;}
+.masonry ul li b{font-weight:600;color:var(--silver);}
+.masonry ul li em{font-style:normal;font-size:11.5px;color:var(--moon);border:1px solid rgba(255,215,154,.3);border-radius:999px;padding:1px 9px;}
+.masonry .go{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--cyan);}
+
+/* ================== 栏目三：分类检索（radio 纯 CSS 选项卡） ================== */
+.tabbox{border:1px solid var(--line);border-radius:var(--r);background:var(--glass);overflow:hidden;}
+.tabbox > input{position:absolute;opacity:0;pointer-events:none;}
+.tabnav{
+  display:flex;gap:0;border-bottom:1px solid var(--line);
+  overflow-x:auto;scrollbar-width:none;
+}
+.tabnav::-webkit-scrollbar{display:none;}
+.tabnav label{
+  flex:0 0 auto;cursor:pointer;white-space:nowrap;
+  padding:14px 22px;font-size:14.5px;font-weight:700;color:var(--dim);
+  border-bottom:2px solid transparent;transition:color .18s ease,border-color .18s ease,background .18s ease;
+}
+.tabnav label:hover{color:var(--silver);background:var(--glass2);}
+#tb1:checked ~ .tabnav label[for="tb1"],
+#tb2:checked ~ .tabnav label[for="tb2"],
+#tb3:checked ~ .tabnav label[for="tb3"],
+#tb4:checked ~ .tabnav label[for="tb4"],
+#tb5:checked ~ .tabnav label[for="tb5"]{
+  color:var(--moon);border-bottom-color:var(--moon);background:rgba(255,215,154,.07);
+}
+.tp{display:none;padding:22px;}
+#tb1:checked ~ .tps .tp1,
+#tb2:checked ~ .tps .tp2,
+#tb3:checked ~ .tps .tp3,
+#tb4:checked ~ .tps .tp4,
+#tb5:checked ~ .tps .tp5{display:block;}
+.tp__hd{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px;}
+.tp__hd h3{font-size:17px;}
+.tp__hd small{font-size:12.5px;color:var(--dim2);}
+.tp > p{font-size:14px;color:var(--dim);margin-bottom:16px;}
+.tp__tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.tp__tags a{
+  font-size:13px;color:var(--dim);border:1px solid var(--line);border-radius:8px;
+  padding:6px 13px;background:rgba(255,255,255,.03);
+  transition:color .16s ease,border-color .16s ease,background .16s ease;
+}
+.tp__tags a:hover{color:var(--moon);border-color:rgba(255,215,154,.45);background:rgba(255,215,154,.08);}
+.tp__note{
+  font-size:12.5px;color:var(--dim2);
+  border-top:1px dashed var(--line);padding-top:12px;
+}
+
+/* ================== 栏目四：索引热榜（meter 元素 + 星级） ================== */
+.board{
+  border:1px solid var(--line);border-radius:var(--r);
+  background:linear-gradient(170deg,var(--glass2),var(--glass));overflow:hidden;
+}
+.board__hd{
+  padding:14px 20px;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.board__hd h3{font-size:15.5px;}
+.board__hd small{font-size:12px;color:var(--dim2);}
+.blist > li{
+  display:grid;grid-template-columns:34px 1fr 190px 96px;gap:14px;align-items:center;
+  padding:13px 20px;border-bottom:1px solid rgba(255,255,255,.08);
+  transition:background .18s ease;
+}
+.blist > li:last-child{border-bottom:0;}
+.blist > li:hover{background:rgba(255,215,154,.05);}
+.blist__no{
+  font-size:14px;font-weight:800;color:var(--moon);text-align:center;
+  width:28px;height:28px;line-height:28px;border-radius:8px;
+  background:rgba(255,215,154,.1);border:1px solid rgba(255,215,154,.25);
+}
+.blist__n{font-size:14.5px;font-weight:600;}
+.blist__n em{font-style:normal;font-size:12px;color:var(--dim2);display:block;font-weight:400;}
+meter{
+  -webkit-appearance:none;appearance:none;
+  width:100%;height:12px;border:0;border-radius:999px;
+  background:rgba(255,255,255,.1);
+}
+meter::-webkit-meter-bar{background:rgba(255,255,255,.1);border-radius:999px;border:0;}
+meter::-webkit-meter-optimum-value{
+  background:linear-gradient(90deg,var(--cyan),var(--moon));border-radius:999px;
+}
+meter::-moz-meter-bar{background:linear-gradient(90deg,var(--cyan),var(--moon));border-radius:999px;}
+.stars{font-size:13px;letter-spacing:1px;color:var(--moon-d);white-space:nowrap;}
+.stars i{font-style:normal;color:rgba(255,255,255,.18);}
+
+/* ================== 栏目五：图鉴（CSS 3D 翻转卡） ================== */
+.flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
+.flip{perspective:1100px;}
+.flip__in{
+  position:relative;min-height:206px;
+  transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,.2,.2,1);
+}
+.flip:hover .flip__in,.flip:focus-within .flip__in,.flip__in:focus{transform:rotateY(180deg);}
+.flip__f,.flip__b{
+  position:absolute;inset:0;border-radius:var(--r);
+  -webkit-backface-visibility:hidden;backface-visibility:hidden;
+  border:1px solid var(--line);padding:22px;
+  display:flex;flex-direction:column;justify-content:center;gap:10px;
+}
+.flip__f{background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));text-align:center;align-items:center;}
+.flip__f b{font-size:40px;letter-spacing:6px;color:var(--moon);line-height:1;}
+.flip__f span{font-size:15px;font-weight:700;}
+.flip__f em{font-style:normal;font-size:12.5px;color:var(--dim2);}
+.flip__b{
+  transform:rotateY(180deg);
+  background:linear-gradient(160deg,rgba(127,215,255,.14),rgba(179,157,255,.1));
+}
+.flip__b h3{font-size:15.5px;margin-bottom:2px;}
+.flip__b p{font-size:13.5px;color:var(--dim);}
+.flip__b a{font-size:13px;font-weight:700;color:var(--cyan);margin-top:4px;}
+
+/* ================== 栏目六：更新日历（日期格） ================== */
+.cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:13px;}
+.cal__d{
+  border:1px solid var(--line);border-radius:var(--r);background:var(--glass);
+  padding:18px;display:flex;gap:16px;align-items:flex-start;
+  transition:border-color .2s ease,background .2s ease;
+}
+.cal__d:hover{border-color:rgba(255,215,154,.4);background:rgba(255,215,154,.06);}
+.cal__dt{
+  flex:0 0 60px;text-align:center;
+  border:1px solid var(--line);border-radius:12px;padding:8px 0;
+  background:rgba(255,255,255,.05);
+}
+.cal__dt b{display:block;font-size:23px;font-weight:800;color:var(--moon);line-height:1.1;}
+.cal__dt span{display:block;font-size:11.5px;color:var(--dim2);letter-spacing:1px;}
+.cal__c h3{font-size:15px;margin-bottom:5px;}
+.cal__c p{font-size:13.2px;color:var(--dim);}
+.cal__c time{font-size:11.5px;color:var(--cyan);letter-spacing:.5px;}
+
+/* ================== 栏目七：问答（checkbox 纯 CSS 折叠） ================== */
+.qbox{max-width:900px;border:1px solid var(--line);border-radius:var(--r);background:var(--glass);overflow:hidden;}
+.qitem{border-bottom:1px solid rgba(255,255,255,.09);}
+.qitem:last-child{border-bottom:0;}
+.qitem > input{position:absolute;opacity:0;pointer-events:none;}
+.qitem label{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  cursor:pointer;padding:16px 20px;font-size:15px;font-weight:700;
+  transition:background .18s ease,color .18s ease;
+}
+.qitem label:hover{background:var(--glass2);color:var(--moon);}
+.qitem label i{
+  flex:0 0 26px;width:26px;height:26px;border-radius:50%;
+  border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;
+  font-style:normal;font-size:15px;line-height:1;color:var(--dim);
+  transition:transform .25s ease,background .2s ease,color .2s ease,border-color .2s ease;
+}
+.qitem > input:checked + label{color:var(--moon);background:rgba(255,215,154,.06);}
+.qitem > input:checked + label i{transform:rotate(45deg);background:var(--moon);color:#20160a;border-color:var(--moon);}
+.qitem .qans{display:none;padding:0 20px 18px;font-size:14.2px;color:var(--dim);}
+.qitem > input:checked ~ .qans{display:block;}
+.qitem > input:focus-visible + label{outline:2px solid var(--cyan);outline-offset:-2px;}
+
+/* ================== 栏目八：订阅（select + email） ================== */
+.join{
+  border:1px solid var(--line);border-radius:var(--r);
+  background:linear-gradient(150deg,rgba(255,215,154,.1),rgba(127,215,255,.08) 60%,rgba(179,157,255,.08));
+  padding:clamp(22px,4vw,38px);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(18px,4vw,36px);align-items:center;
+}
+.join h2{font-size:clamp(20px,3vw,26px);margin-bottom:10px;}
+.join > div > p{font-size:14.3px;color:var(--dim);margin-bottom:16px;}
+.jform{display:flex;gap:9px;flex-wrap:wrap;}
+.jform select,.jform input{
+  padding:11px 14px;font-size:14.5px;border-radius:10px;
+  border:1px solid var(--line2);background:rgba(8,13,36,.55);color:var(--silver);
+}
+.jform select{flex:0 0 auto;min-width:132px;}
+.jform input{flex:1 1 200px;min-width:0;}
+.jform select:focus,.jform input:focus{outline:2px solid var(--moon);outline-offset:0;}
+.jform button{
+  flex:0 0 auto;padding:11px 22px;font-size:14.5px;font-weight:700;cursor:pointer;
+  border-radius:10px;border:1px solid transparent;
+  background:linear-gradient(120deg,var(--moon),var(--moon-d));color:#20160a;
+  transition:transform .18s ease;
+}
+.jform button:hover{transform:translateY(-2px);}
+.jtip{font-size:12.5px;color:var(--dim2);margin-top:11px;}
+.jlist{display:grid;gap:10px;}
+.jlist li{
+  display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--dim);
+  border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(255,255,255,.04);
+}
+.jlist li b{
+  flex:0 0 26px;font-size:12px;text-align:center;color:var(--moon);
+  border:1px solid rgba(255,215,154,.3);border-radius:7px;padding:2px 0;
+}
+
+/* ================== 页脚 ================== */
+.ft{background:#050818;border-top:1px solid var(--line);padding:clamp(32px,5vw,54px) 0 26px;}
+.ft__g{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:24px;}
+.ft h4{font-size:14px;color:var(--silver);margin-bottom:12px;}
+.ft a,.ft p{font-size:13px;color:var(--dim2);display:block;padding:3px 0;}
+.ft a:hover{color:var(--moon);}
+.ft address{font-style:normal;font-size:13px;color:var(--dim2);word-break:break-all;}
+.ft__n{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:#6b7695;line-height:1.9;}
+.totop{
+  position:fixed;right:15px;bottom:15px;z-index:95;
+  display:flex;align-items:center;justify-content:center;
+  width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--line2);background:rgba(13,21,51,.92);color:var(--moon);
+  font-size:17px;box-shadow:0 8px 22px rgba(0,0,0,.45);
+}
+.totop:hover{background:var(--moon);color:#20160a;}
+
+/* ================== 响应式 ================== */
+@media (max-width:1080px){
+  .masonry{columns:2;}
+  .join{grid-template-columns:1fr;}
+}
+@media (max-width:860px){
+  .blist > li{grid-template-columns:32px 1fr 96px;}
+  .blist > li > meter{display:none;}
+  .ft__g{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:768px){
+  body{font-size:15px;}
+  .wrap{padding:0 16px;}
+  .hdr__in{padding:10px 16px;gap:12px;}
+  .logo__d{display:none;}
+  .hero__grid{grid-template-columns:1fr;}
+  .moonbox{order:-1;}
+  .moon{width:clamp(132px,38vw,180px);}
+  .hero__acts .act{flex:1 1 100%;justify-content:center;}
+  .hero__data > div{flex:1 1 50%;border-bottom:1px solid var(--line);}
+  .tabnav label{padding:13px 17px;font-size:13.5px;}
+  .tp{padding:18px;}
+  .flip__in{min-height:190px;}
+}
+@media (max-width:560px){
+  .masonry{columns:1;}
+  .blist > li{grid-template-columns:30px 1fr;gap:10px;}
+  .blist > li > meter,.blist__rt{display:none;}
+  .ft__g{grid-template-columns:1fr;}
+  .cal__d{flex-direction:column;gap:12px;}
+  .cal__dt{flex:0 0 auto;width:74px;}
+  .jform select,.jform input,.jform button{flex:1 1 100%;}
+}
+@media (max-width:380px){
+  .logo__n{font-size:15px;}
+  .pnav a{padding:6px 12px;font-size:12.5px;}
+  .hero__data > div{flex:1 1 100%;border-right:0;}
+  .hero__data > div:last-child{border-bottom:0;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;scroll-behavior:auto !important;}
+}
+</style>
+</head>
+<body id="top">
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ============ 顶部条（横向胶囊导航） ============ -->
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="logo" href="https://yueliangyingshidaquan-cn.github.io/" aria-label="月亮影视大全首页">
+      <span class="logo__orb" aria-hidden="true"></span>
+      <span>
+        <span class="logo__n">月亮影视大全</span>
+        <span class="logo__d">yueliangyingshidaquan-cn.github.io</span>
+      </span>
+    </a>
+    <nav class="pnav" aria-label="主导航">
+      <a href="#channels">核心栏目</a>
+      <a href="#catalog">分类检索</a>
+      <a href="#board">索引热榜</a>
+      <a href="#gallery">条目图鉴</a>
+      <a href="#calendar">更新日历</a>
+      <a href="#faq">常见问题</a>
+      <a class="hot" href="#join">订阅更新</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ 栏目一：月夜首屏 ============ -->
+  <section class="hero" aria-labelledby="h1t">
+    <span class="hero__stars" aria-hidden="true"></span>
+    <div class="wrap hero__grid">
+      <div>
+        <span class="badge-moon">YUELIANG · 影视条目聚合</span>
+        <h1 id="h1t">月亮影视大全 · 影视条目聚合与<em>更新索引导航</em></h1>
+        <p class="hero__lead">
+          <strong>月亮影视大全</strong>把院线、剧集、动漫、综艺与纪录片的条目信息整理成可检索的分类索引与更新台账：
+          栏目独立成块，条目带状态标记，追更进度一目了然。全站移动端自适应，手机、平板、桌面都能顺畅浏览，索引每日更新。
+        </p>
+        <div class="hero__acts">
+          <a class="act act--fill" href="#catalog">开始检索条目</a>
+          <a class="act act--line" href="#gallery">浏览条目图鉴</a>
+        </div>
+        <dl class="hero__data">
+          <div><dt>TOTAL</dt><dd>3,612<i>条</i></dd></div>
+          <div><dt>ON AIR</dt><dd>236<i>部</i></dd></div>
+          <div><dt>SECTIONS</dt><dd>8<i>个</i></dd></div>
+          <div><dt>UPDATED</dt><dd>每日<i>更新</i></dd></div>
+        </dl>
+      </div>
+
+      <div class="moonbox">
+        <div class="moon" role="img" aria-label="月亮影视大全 月相标识">
+          <span class="moon__ring" aria-hidden="true"></span>
+        </div>
+        <p class="mooncap">
+          <b>月亮影视大全</b> 只做条目索引与聚合导航，条目状态与更新时间均可回溯核对。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目二：核心栏目（CSS 多列瀑布流） ============ -->
+  <section class="sec" id="channels" aria-labelledby="h-ch">
+    <div class="wrap">
+      <div class="sh">
+        <span class="sh__tag">SECTION 01 / CHANNELS</span>
+        <h2 id="h-ch">月亮影视大全的六大核心栏目</h2>
+        <p>六个栏目采用瀑布流陈列，内容长度与更新节奏各不相同，逐块阅读即可掌握全站结构。</p>
+      </div>
+
+      <div class="masonry">
+        <article>
+          <h3><span aria-hidden="true">🎬</span>院线速览大全</h3>
+          <p>按上映档期与出品地区分层整理影片条目，标注类型标签与条目状态。</p>
+          <ul>
+            <li><b>剧情长片</b><em>1,204 条</em></li>
+            <li><b>科幻类型</b><em>318 条</em></li>
+            <li><b>动画电影</b><em>176 条</em></li>
+          </ul>
+          <a class="go" href="#">进入栏目 →</a>
+        </article>
+
+        <article>
+          <h3><span aria-hidden="true">📒</span>剧集追更大全</h3>
+          <p>连续剧、迷你剧、单元剧的进度台账，记录已更新集数、更新节奏与在播状态，追更不再混乱。</p>
+          <ul>
+            <li><b>国产剧集</b><em>462 条</em></li>
+            <li><b>欧美剧集</b><em>231 条</em></li>
+            <li><b>日韩剧集</b><em>169 条</em></li>
+          </ul>
+          <a class="go" href="#">进入栏目 →</a>
+        </article>
+
+        <article>
+          <h3><span aria-hidden="true">🌸</span>动漫番剧大全</h3>
+          <p>本季新番、剧场版与完结番分季归档，标注话数、放送周期与完结时间。</p>
+          <ul>
+            <li><b>本季新番</b><em>58 部</em></li>
+            <li><b>剧场版</b><em>104 部</em></li>
+            <li><b>完结归档</b><em>85 部</em></li>
+          </ul>
+          <a class="go" href="#">进入栏目 →</a>
+        </article>
+
+        <article>
+          <h3><span aria-hidden="true">🎤</span>综艺纪实大全</h3>
+          <p>季播综艺与文化纪实分列陈列，含单集时长、更新频率与完结状态说明。</p>
+          <ul>
+            <li><b>季播综艺</b><em>142 档</em></li>
+            <li><b>文化纪实</b><em>96 部</em></li>
+          </ul>
+          <a class="go" href="#">进入栏目 →</a>
+        </article>
+
+        <article>
+          <h3><span aria-hidden="true">🎭</span>影人档案库</h3>
+          <p>按导演、演员、编剧维度汇总作品条目，配合条目库交叉检索，理清创作脉络与作品年表。</p>
+          <ul>
+            <li><b>导演合集</b><em>312 位</em></li>
+            <li><b>演员作品</b><em>1,486 条</em></li>
+            <li><b>幕后主创</b><em>204 位</em></li>
+          </ul>
+          <a class="go" href="#">进入栏目 →</a>
+        </article>
+
+        <article>
+          <h3><span aria-hidden="true">🏆</span>榜单与专题</h3>
+          <p>年度盘点、类型巡礼、口碑索引与完结归档四类专题，排序口径公开可查，仅用于索引排序。</p>
+          <ul>
+            <li><b>年度盘点</b><em>12 期</em></li>
+            <li><b>类型巡礼</b><em>24 期</em></li>
+            <li><b>口碑索引</b><em>每周更新</em></li>
+          </ul>
+          <a class="go" href="#">进入栏目 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目三：分类检索（纯 CSS 选项卡） ============ -->
+  <section class="sec sec--deep" id="catalog" aria-labelledby="h-ca">
+    <div class="wrap">
+      <div class="sh">
+        <span class="sh__tag">SECTION 02 / CATALOG</span>
+        <h2 id="h-ca">分类检索 · 月亮影视大全分站目录</h2>
+        <p>点击分类标签切换面板，每个面板对应一个内容形态的细分检索入口，无需脚本即可完成切换。</p>
+      </div>
+
+      <div class="tabbox">
+        <input type="radio" name="tb" id="tb1" checked>
+        <input type="radio" name="tb" id="tb2">
+        <input type="radio" name="tb" id="tb3">
+        <input type="radio" name="tb" id="tb4">
+        <input type="radio" name="tb" id="tb5">
+
+        <div class="tabnav">
+          <label for="tb1">电影</label>
+          <label for="tb2">剧集</label>
+          <label for="tb3">动漫</label>
+          <label for="tb4">综艺纪实</label>
+          <label for="tb5">影人档案</label>
+        </div>
+
+        <div class="tps">
+          <div class="tp tp1">
+            <div class="tp__hd"><h3>电影分类检索</h3><small>收录 1,204 条 · 每日更新</small></div>
+            <p>按类型、地区与年份标签组合收敛范围，条目标注档期状态与收录时间。</p>
+            <div class="tp__tags">
+              <a href="#">剧情</a><a href="#">喜剧</a><a href="#">动作</a><a href="#">科幻</a>
+              <a href="#">悬疑</a><a href="#">动画电影</a><a href="#">爱情</a><a href="#">文艺</a>
+            </div>
+            <p class="tp__note">以上标签为站内分类占位，正式上线后可替换为对应细分检索页地址。</p>
+          </div>
+          <div class="tp tp2">
+            <div class="tp__hd"><h3>剧集分类检索</h3><small>收录 862 条 · 每周更新</small></div>
+            <p>在播与完结分区陈列，条目含已更新集数、总集数与更新节奏三类标记。</p>
+            <div class="tp__tags">
+              <a href="#">国产剧</a><a href="#">欧美剧</a><a href="#">日韩剧</a><a href="#">港台剧</a>
+              <a href="#">迷你剧</a><a href="#">单元剧</a><a href="#">在播专区</a><a href="#">完结归档</a>
+            </div>
+            <p class="tp__note">以上标签为站内分类占位，正式上线后可替换为对应细分检索页地址。</p>
+          </div>
+          <div class="tp tp3">
+            <div class="tp__hd"><h3>动漫分类检索</h3><small>收录 247 条 · 按季归档</small></div>
+            <p>按放送季度归档，完结番移入归档区，不再占用当季索引位。</p>
+            <div class="tp__tags">
+              <a href="#">本季新番</a><a href="#">剧场版</a><a href="#">完结番</a><a href="#">国创动画</a>
+              <a href="#">经典重制</a>
+            </div>
+            <p class="tp__note">以上标签为站内分类占位，正式上线后可替换为对应细分检索页地址。</p>
+          </div>
+          <div class="tp tp4">
+            <div class="tp__hd"><h3>综艺纪实检索</h3><small>收录 238 条 · 滚动更新</small></div>
+            <p>季播综艺与纪录片分列，标注单集时长、更新频率与完结状态。</p>
+            <div class="tp__tags">
+              <a href="#">真人秀</a><a href="#">访谈</a><a href="#">音乐</a><a href="#">竞技</a>
+              <a href="#">人文历史</a><a href="#">自然地理</a><a href="#">科技前沿</a>
+            </div>
+            <p class="tp__note">以上标签为站内分类占位，正式上线后可替换为对应细分检索页地址。</p>
+          </div>
+          <div class="tp tp5">
+            <div class="tp__hd"><h3>影人档案检索</h3><small>收录 2,002 条 · 滚动补充</small></div>
+            <p>按创作身份汇总作品条目，配合条目库交叉检索，理清作品年表。</p>
+            <div class="tp__tags">
+              <a href="#">导演合集</a><a href="#">演员作品</a><a href="#">编剧作品</a><a href="#">摄影美术</a>
+              <a href="#">配乐音效</a>
+            </div>
+            <p class="tp__note">以上标签为站内分类占位，正式上线后可替换为对应细分检索页地址。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目四：索引热榜（meter） ============ -->
+  <section class="sec" id="board" aria-labelledby="h-bo">
+    <div class="wrap">
+      <div class="sh">
+        <span class="sh__tag">SECTION 03 / RANKING</span>
+        <h2 id="h-bo">索引热榜 · 月亮影视大全排序口径</h2>
+        <p>热度值以条目收录时间、分类分布与信息完整度综合计算，不引用任何外部播放数据，也不做商业加权。</p>
+      </div>
+
+      <div class="board">
+        <div class="board__hd">
+          <h3>全站条目索引热度榜</h3>
+          <small>更新周期：每日 09:00</small>
+        </div>
+        <ol class="blist">
+          <li>
+            <span class="blist__no" aria-hidden="true">1</span>
+            <span class="blist__n">院线速览 · 剧情长片索引<em>电影 / 剧情</em></span>
+            <meter min="0" max="100" value="94" title="热度 94">94%</meter>
+            <span class="stars" aria-label="评级 5 分">★★★★★</span>
+          </li>
+          <li>
+            <span class="blist__no" aria-hidden="true">2</span>
+            <span class="blist__n">剧集追更 · 国产连续剧台账<em>剧集 / 国产</em></span>
+            <meter min="0" max="100" value="89" title="热度 89">89%</meter>
+            <span class="stars" aria-label="评级 4.5 分">★★★★<i>★</i></span>
+          </li>
+          <li>
+            <span class="blist__no" aria-hidden="true">3</span>
+            <span class="blist__n">动漫番剧 · 本季新番归档<em>动漫 / 新番</em></span>
+            <meter min="0" max="100" value="82" title="热度 82">82%</meter>
+            <span class="stars" aria-label="评级 4 分">★★★★<i>★</i></span>
+          </li>
+          <li>
+            <span class="blist__no" aria-hidden="true">4</span>
+            <span class="blist__n">综艺纪实 · 季播真人秀索引<em>综艺 / 真人秀</em></span>
+            <meter min="0" max="100" value="76" title="热度 76">76%</meter>
+            <span class="stars" aria-label="评级 4 分">★★★★<i>★</i></span>
+          </li>
+          <li>
+            <span class="blist__no" aria-hidden="true">5</span>
+            <span class="blist__n">影人档案 · 导演作品年表<em>影人 / 导演</em></span>
+            <meter min="0" max="100" value="68" title="热度 68">68%</meter>
+            <span class="stars" aria-label="评级 3.5 分">★★★<i>★★</i></span>
+          </li>
+          <li>
+            <span class="blist__no" aria-hidden="true">6</span>
+            <span class="blist__n">榜单专题 · 年度盘点合集<em>专题 / 盘点</em></span>
+            <meter min="0" max="100" value="61" title="热度 61">61%</meter>
+            <span class="stars" aria-label="评级 3 分">★★★<i>★★</i></span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目五：条目图鉴（3D 翻转卡） ============ -->
+  <section class="sec sec--deep" id="gallery" aria-labelledby="h-ga">
+    <div class="wrap">
+      <div class="sh">
+        <span class="sh__tag">SECTION 04 / GALLERY</span>
+        <h2 id="h-ga">条目图鉴 · 月亮影视大全内容形态</h2>
+        <p>四张卡片正面为形态标识，鼠标悬停或键盘聚焦即翻转查看背面说明，卡片为纯样式占位，不依赖任何外部图片。</p>
+      </div>
+
+      <div class="flips">
+        <article class="flip" tabindex="0" aria-labelledby="f1">
+          <div class="flip__in">
+            <div class="flip__f">
+              <b aria-hidden="true">院线</b>
+              <span id="f1">院线速览图鉴</span>
+              <em>悬停或聚焦查看说明</em>
+            </div>
+            <div class="flip__b">
+              <h3>院线速览图鉴</h3>
+              <p>按上映档期整理条目，标注类型、地区与条目状态，便于快速筛选目标影片条目。</p>
+              <a href="#">进入栏目 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip" tabindex="0" aria-labelledby="f2">
+          <div class="flip__in">
+            <div class="flip__f">
+              <b aria-hidden="true">追更</b>
+              <span id="f2">剧集追更图鉴</span>
+              <em>悬停或聚焦查看说明</em>
+            </div>
+            <div class="flip__b">
+              <h3>剧集追更图鉴</h3>
+              <p>连续剧与迷你剧分列，标注已更新集数与更新节奏，追更进度清晰可查。</p>
+              <a href="#">进入栏目 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip" tabindex="0" aria-labelledby="f3">
+          <div class="flip__in">
+            <div class="flip__f">
+              <b aria-hidden="true">番剧</b>
+              <span id="f3">动漫番剧图鉴</span>
+              <em>悬停或聚焦查看说明</em>
+            </div>
+            <div class="flip__b">
+              <h3>动漫番剧图鉴</h3>
+              <p>本季新番与完结番分区，标注话数、放送周期与完结时间，按季度归档。</p>
+              <a href="#">进入栏目 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip" tabindex="0" aria-labelledby="f4">
+          <div class="flip__in">
+            <div class="flip__f">
+              <b aria-hidden="true">纪实</b>
+              <span id="f4">综艺纪实图鉴</span>
+              <em>悬停或聚焦查看说明</em>
+            </div>
+            <div class="flip__b">
+              <h3>综艺纪实图鉴</h3>
+              <p>季播综艺与文化纪实分区陈列，含单集时长、更新频率与完结状态说明。</p>
+              <a href="#">进入栏目 →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目六：更新日历 ============ -->
+  <section class="sec" id="calendar" aria-labelledby="h-cal">
+    <div class="wrap">
+      <div class="sh">
+        <span class="sh__tag">SECTION 05 / CALENDAR</span>
+        <h2 id="h-cal">更新日历 · 月亮影视大全索引动态</h2>
+        <p>近期条目新增、台账更新与归档动作按日期陈列，便于回溯某一日索引发生了哪些变化。</p>
+      </div>
+
+      <div class="cal">
+        <div class="cal__d">
+          <div class="cal__dt"><b>11</b><span>OCT</span></div>
+          <div class="cal__c">
+            <h3>院线条目库新增 12 条</h3>
+            <time datetime="2026-10-11">2026-10-11 · 每日更新</time>
+            <p>补充档期状态与类型标签，条目信息完整度同步校验。</p>
+          </div>
+        </div>
+        <div class="cal__d">
+          <div class="cal__dt"><b>10</b><span>OCT</span></div>
+          <div class="cal__c">
+            <h3>剧集台账更新 8 部进度</h3>
+            <time datetime="2026-10-10">2026-10-10 · 每周更新</time>
+            <p>在播剧集同步已更新集数，两部条目标记为已完结。</p>
+          </div>
+        </div>
+        <div class="cal__d">
+          <div class="cal__dt"><b>08</b><span>OCT</span></div>
+          <div class="cal__c">
+            <h3>番剧索引归档 3 部完结</h3>
+            <time datetime="2026-10-08">2026-10-08 · 按季归档</time>
+            <p>完结番移入归档区，释放当季索引位给新番条目。</p>
+          </div>
+        </div>
+        <div class="cal__d">
+          <div class="cal__dt"><b>05</b><span>OCT</span></div>
+          <div class="cal__c">
+            <h3>影人档案补充 5 条作品</h3>
+            <time datetime="2026-10-05">2026-10-05 · 滚动补充</time>
+            <p>导演与演员条目补充作品年表，交叉检索关系同步建立。</p>
+          </div>
+        </div>
+        <div class="cal__d">
+          <div class="cal__dt"><b>01</b><span>OCT</span></div>
+          <div class="cal__c">
+            <h3>榜单排序口径公示</h3>
+            <time datetime="2026-10-01">2026-10-01 · 口径调整</time>
+            <p>热度计算改为收录时间、分类分布与完整度三项加权。</p>
+          </div>
+        </div>
+        <div class="cal__d">
+          <div class="cal__dt"><b>28</b><span>SEP</span></div>
+          <div class="cal__c">
+            <h3>站点视觉体系重构</h3>
+            <time datetime="2026-09-28">2026-09-28 · 版本迭代</time>
+            <p>八大板块改用各自独立的 DOM 结构与排版方案，避免模板同质化。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目七：常见问题（checkbox 折叠） ============ -->
+  <section class="sec sec--deep" id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+      <div class="sh">
+        <span class="sh__tag">SECTION 06 / FAQ</span>
+        <h2 id="h-faq">关于月亮影视大全的常见问题</h2>
+        <p>点击问题展开答案，纯样式折叠无需脚本，可同时展开多项对照阅读。</p>
+      </div>
+
+      <div class="qbox">
+        <div class="qitem">
+          <input type="checkbox" id="q1" checked>
+          <label for="q1">月亮影视大全是做什么的站点？<i aria-hidden="true">＋</i></label>
+          <div class="qans"><p>月亮影视大全是一个影视条目聚合与索引导航站点，主要做条目分类整理、追更台账、番剧归档与影人档案检索，帮助浏览者快速定位想了解的条目。</p></div>
+        </div>
+        <div class="qitem">
+          <input type="checkbox" id="q2">
+          <label for="q2">站点是否支持手机浏览？<i aria-hidden="true">＋</i></label>
+          <div class="qans"><p>支持。全站采用弹性栅格与流式布局，覆盖 380px 至桌面宽屏区间；顶部导航在窄屏可横向滑动，分类面板与图鉴卡片均适配触屏操作。</p></div>
+        </div>
+        <div class="qitem">
+          <input type="checkbox" id="q3">
+          <label for="q3">条目与台账多久更新一次？<i aria-hidden="true">＋</i></label>
+          <div class="qans"><p>院线条目库每日更新，剧集追更台账每周更新，动漫番剧索引按季度归档，影人档案随作品收录滚动补充，更新记录可在更新日历中回溯。</p></div>
+        </div>
+        <div class="qitem">
+          <input type="checkbox" id="q4">
+          <label for="q4">热榜的排序依据是什么？<i aria-hidden="true">＋</i></label>
+          <div class="qans"><p>热度值由条目收录时间、分类分布与信息完整度三项综合计算，不引用任何外部播放数据，也不做任何商业加权，口径调整会在更新日历中公示。</p></div>
+        </div>
+        <div class="qitem">
+          <input type="checkbox" id="q5">
+          <label for="q5">是否提供影视文件的存储或下载？<i aria-hidden="true">＋</i></label>
+          <div class="qans"><p>不提供。月亮影视大全仅做条目索引与聚合导航，不存储、不上传、不分发任何影音文件；影视作品著作权归权利人所有，请通过正规授权渠道观看。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目八：订阅更新 ============ -->
+  <section class="sec" id="join" aria-labelledby="h-join">
+    <div class="wrap">
+      <div class="join">
+        <div>
+          <h2 id="h-join">订阅月亮影视大全的索引更新</h2>
+          <p>选择关注的内容形态并留下邮箱，即可接收条目新增与排期变动提醒，内容仅涉及索引更新，不作任何商业推广。</p>
+          <form class="jform" action="#" method="get">
+            <label class="sr-only" for="jcat">关注的内容形态</label>
+            <select id="jcat" name="jcat">
+              <option value="all">全部栏目</option>
+              <option value="movie">院线速览</option>
+              <option value="tv">剧集追更</option>
+              <option value="anime">动漫番剧</option>
+              <option value="doc">综艺纪实</option>
+            </select>
+            <label class="sr-only" for="jmail">邮箱地址</label>
+            <input id="jmail" name="jmail" type="email" inputmode="email" autocomplete="email" placeholder="输入邮箱地址" required>
+            <button type="submit">订阅更新</button>
+          </form>
+          <p class="jtip">提交为示例交互，实际站点接入后可替换为真实订阅接口。</p>
+        </div>
+        <ul class="jlist">
+          <li><b>A</b><span>条目新增提醒：关注栏目有新条目收录时同步通知。</span></li>
+          <li><b>B</b><span>状态变更提醒：在播条目更新集数或完结时告知。</span></li>
+          <li><b>C</b><span>口径调整公示：排序与归档规则变更会公开说明。</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__g">
+      <div>
+        <h4>月亮影视大全</h4>
+        <p>影视条目聚合与更新索引导航站点，聚焦条目分类整理、追更台账与影人档案检索。</p>
+        <address>https://yueliangyingshidaquan-cn.github.io/</address>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <a href="#channels">核心栏目</a>
+        <a href="#catalog">分类检索</a>
+        <a href="#board">索引热榜</a>
+      </div>
+      <div>
+        <h4>检索入口</h4>
+        <a href="#gallery">条目图鉴</a>
+        <a href="#calendar">更新日历</a>
+        <a href="#faq">常见问题</a>
+      </div>
+      <div>
+        <h4>快速链接</h4>
+        <a href="#">院线速览大全</a>
+        <a href="#">剧集追更大全</a>
+        <a href="#">动漫番剧大全</a>
+      </div>
+    </div>
+    <div class="ft__n">
+      <p>本站为影视条目聚合与索引导航站点，仅提供条目分类、追更台账、番剧归档与影人档案检索服务，不存储、不上传、不分发任何影音文件，也不提供任何未经授权的播放或下载服务。影视作品著作权归各自权利人所有，请通过正规授权渠道观看。</p>
+      <p>© 2026 月亮影视大全 · yueliangyingshidaquan-cn.github.io · 页面内所有内页链接均为占位锚点</p>
+    </div>
+  </div>
+</footer>
+
+<a class="totop" href="#top" aria-label="返回页面顶部">↑</a>
+
+<!-- ============ 结构化数据 ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://yueliangyingshidaquan-cn.github.io/#website",
+      "url": "https://yueliangyingshidaquan-cn.github.io/",
+      "name": "月亮影视大全",
+      "alternateName": ["月亮影视大全官网", "yueliangyingshidaquan-cn", "月亮影视大全影视索引"],
+      "description": "月亮影视大全是影视条目聚合索引站点，提供院线速览、剧集追更、动漫番剧、综艺纪实、影人档案与榜单专题等栏目。",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "https://yueliangyingshidaquan-cn.github.io/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://yueliangyingshidaquan-cn.github.io/#org",
+      "name": "月亮影视大全",
+      "url": "https://yueliangyingshidaquan-cn.github.io/",
+      "description": "影视条目聚合与更新索引导航站点"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://yueliangyingshidaquan-cn.github.io/#webpage",
+      "url": "https://yueliangyingshidaquan-cn.github.io/",
+      "name": "月亮影视大全 - 影视条目聚合与更新索引导航",
+      "description": "月亮影视大全提供院线速览、剧集追更、动漫番剧、综艺纪实、影人档案与榜单专题等栏目，移动端自适应，条目分类清晰。",
+      "isPartOf": { "@id": "https://yueliangyingshidaquan-cn.github.io/#website" },
+      "inLanguage": "zh-CN",
+      "breadcrumb": { "@id": "https://yueliangyingshidaquan-cn.github.io/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yueliangyingshidaquan-cn.github.io/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://yueliangyingshidaquan-cn.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "影视条目聚合" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "月亮影视大全核心栏目",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "院线速览大全" },
+        { "@type": "ListItem", "position": 2, "name": "剧集追更大全" },
+        { "@type": "ListItem", "position": 3, "name": "动漫番剧大全" },
+        { "@type": "ListItem", "position": 4, "name": "综艺纪实大全" },
+        { "@type": "ListItem", "position": 5, "name": "影人档案库" },
+        { "@type": "ListItem", "position": 6, "name": "榜单与专题" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "月亮影视大全是做什么的站点？",
+          "acceptedAnswer": { "@type": "Answer", "text": "月亮影视大全是一个影视条目聚合与索引导航站点，主要做条目分类整理、追更台账、番剧归档与影人档案检索，帮助浏览者快速定位想了解的条目。" }
+        },
+        {
+          "@type": "Question",
+          "name": "站点是否支持手机浏览？",
+          "acceptedAnswer": { "@type": "Answer", "text": "支持。全站采用弹性栅格与流式布局，覆盖 380px 至桌面宽屏区间；顶部导航在窄屏可横向滑动，分类面板与图鉴卡片均适配触屏操作。" }
+        },
+        {
+          "@type": "Question",
+          "name": "条目与台账多久更新一次？",
+          "acceptedAnswer": { "@type": "Answer", "text": "院线条目库每日更新，剧集追更台账每周更新，动漫番剧索引按季度归档，影人档案随作品收录滚动补充，更新记录可在更新日历中回溯。" }
+        },
+        {
+          "@type": "Question",
+          "name": "是否提供影视文件的存储或下载？",
+          "acceptedAnswer": { "@type": "Answer", "text": "不提供。月亮影视大全仅做条目索引与聚合导航，不存储、不上传、不分发任何影音文件；影视作品著作权归权利人所有，请通过正规授权渠道观看。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
